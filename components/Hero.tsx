@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import ParticleBackground from "./ParticleBackground";
 
 interface HeroProps {
   onHireClick: () => void;
@@ -15,13 +16,10 @@ export default function Hero({ onHireClick }: HeroProps) {
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6">
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6">
+      <ParticleBackground />
       <div
-        className="animate-gradient pointer-events-none absolute inset-0 bg-gradient-to-br from-accent/10 via-background to-background"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.15),transparent_50%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.08),transparent_50%)]"
         aria-hidden="true"
       />
 
